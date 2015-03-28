@@ -66,11 +66,6 @@
     font-family: @baseFontFamily;
 }
 
-.open-sans-italic() {
-    font-family: @baseFontFamily;
-    font-style: italic;
-}
-
 .open-sans-light() {
     font-family: 'Open Sans Light', X-LocaleSpecific-Light, @baseFontFamily;
     font-weight: normal;
@@ -119,7 +114,6 @@
 @gridRowWidthMobileWide:  (@gridColumnsMobileWide * @gridColumnWidthNarrow) + (@gridGutterWidth * (@gridColumnsMobileWide - 1));
 
 // Breakpoints for common devices
-@breakDesktopWide:        1400px;
 @breakDesktop:            1000px;
 @breakTablet:             760px;
 @breakMobileLandscape:    480px;
@@ -459,8 +453,7 @@
     @at2x_path: ~`@{path}.replace(/\.\w+$/, function(match) { return "-high-res" + match; })`;
     @media @highdpi {
         background-image: url("@{at2x_path}");
-        -webkit-background-size: @w @h;
-                background-size: @w @h;
+        background-size: @w @h;
     }
 }
 
