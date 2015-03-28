@@ -23,6 +23,26 @@
     </style>
 </head>
 <body>
+    <div id="tileA">Hello World!</div>
+    <div id="tileB"></div>
+    <div id="tileC"></div>
+    <div id="tileD"></div>
+    <div id="tileE"></div>
+    <div id="tileF"></div>
+    <div id="tileG"></div>
+    <div id="tileH"></div>
+    <div id="tileI"></div>
+    <div id="tileJ"></div>
+    <div id="tileK"></div>
+    <div id="tileL"></div>
+    <div id="tileM"></div>
+    <div id="tileN"></div>
+    <div id="tileO"></div>
+    <div id="tileP"></div>
+    <div id="tileQ"></div>
+    <div id="tileR"></div>
+    <div id="tileS"></div>
+
     <div class="container"></div>
 <script>
 var parseLayout = function(str) {
@@ -78,12 +98,10 @@ var names = [
 ];
 
 names.map(function(name) {
-    tiles[name] = document.createElement('div');
+    tiles[name] = document.querySelector(`#tile${name}`);
     containerDOM.appendChild(tiles[name]);
 });
 
-// Add your code here to setup the content of the tiles.
-tiles.A.innerHTML = 'Hello World!';
 
 var updateTilePosition = function(dom, tileData) {
     dom.className = 'tileElement';
