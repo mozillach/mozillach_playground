@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style type="text/css">
+    html, body {
+        height: 100%;
+    }
+
+    .container {
+        margin: 0 auto;
+        border: 1px solid gray;
+        position: relative;
+        width: 1260px;
+        height: 100%;
+    }
+
+    .tileElement {
+        position: absolute;
+        border: 1px solid gray;
+        display: inline-block;
+    }
+
+    </style>
+</head>
+<body>
+    <div class="container"></div>
+<script>
+var parseLayout = function(str) {
+    /**
+     * Represents a single tile entry. The tile starts at (xs, ys) and extends
+     * to (xe, ye), where the start and end positions are inclusive. The coordinate
+     * system starts at the top left border with (0, 0).
+     */
+    var TileEntry = function(name, x, y) {
+        this.name = name;
+
+        // Start position of the tile.
+        this.xs = x;
+        this.ys = y;
+        // End position of the tile.
+        this.xe = x;
+        this.ye = y;
+    }
+    TileEntry.prototype.extendTo = function(x, y) {
+        this.xe = Math.max(this.xe, x);
+        this.ye = Math.max(this.ye, y);
+    }
+
+    var tiles = {};
+    var lines = str.replace(/=/g, ' ').split('\n').slice(1);
+    lines.forEach(function(line, y) {
+        line.trim().split(' ').forEach(function(c, x) {
+            if (c in tiles) {
+                tiles[c].extendTo(x, y);
+            } else {
+                tiles[c] = new TileEntry(c, x, y);
+            }
+        });
+    });
+
+    return tiles;
+}
+
+var layouts = {};
+layouts['1260'] = parseLayout(`
+    A=A B=B C D E=E
+    A=A F=F=F=F G H
+    A=A F=F=F=F I=I
+    J=J K=K L=L=L=L
+    M N K=K L=L=L=L
+    O P K=K Q R=R S`);
+
+var containerDOM = document.querySelector('.container');
+var tiles = {};
+var names = [
+    'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L',
+    'M', 'N', 'O', 'P', 'Q', 'R', 'S'
+];
+
+names.map(function(name) {
+    tiles[name] = document.createElement('div');
+    containerDOM.appendChild(tiles[name]);
+});
+
+// Add your code here to setup the content of the tiles.
+tiles.A.innerHTML = 'Hello World!';
+
+var updateTilePosition = function(dom, tileData) {
+    dom.className = 'tileElement';
+    dom.style.left = (tileData.xs * 160) + 'px';
+    dom.style.top = (tileData.ys * 160) + 'px';
+    dom.style.width = ((tileData.xe - tileData.xs + 1) * 160 - 40) + 'px';
+    dom.style.height = ((tileData.ye - tileData.ys + 1) * 160 - 40) + 'px';
+    return dom;
+}
+
+
+var layout = layouts['1260'];
+names.forEach(function(name) {
+    updateTilePosition(tiles[name], layout[name]);
+})
+
+</script>
+</body>
+</html>
