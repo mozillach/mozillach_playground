@@ -23,6 +23,33 @@
     </style>
 </head>
 <body>
+    <div id="tileA"></div>
+    <div id="tileB"></div>
+    <div id="tileC"></div>
+    <div id="tileD"></div>
+    <div id="tileE"></div>
+    <div id="tileF"></div>
+    <div id="tileG"></div>
+    <div id="tileH"></div>
+    <div id="tileI">
+        <a class="twitter-timeline" href="https://twitter.com/MozillaCH" data-widget-id="581826491673128960">Tweets by @MozillaCH</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
+            if(!d.getElementById(id)){
+                js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);
+            }}(document,"script","twitter-wjs");
+        </script>
+    </div>
+    <div id="tileJ"></div>
+    <div id="tileK"></div>
+    <div id="tileL"></div>
+    <div id="tileM"></div>
+    <div id="tileN"></div>
+    <div id="tileO"></div>
+    <div id="tileP"></div>
+    <div id="tileQ"></div>
+    <div id="tileR"></div>
+    <div id="tileS"></div>
+
     <div class="container"></div>
 <script>
 var parseLayout = function(str) {
@@ -66,9 +93,9 @@ layouts['1260'] = parseLayout(`
     A=A B=B C D E=E
     A=A F=F=F=F G H
     A=A F=F=F=F I=I
-    J=J K=K L=L=L=L
-    M N K=K L=L=L=L
-    O P K=K Q R=R S`);
+    J=J K=K L=L I=I
+    M N K=K L=L I=I
+    O P K=K Q R I=I`);
 
 var containerDOM = document.querySelector('.container');
 var tiles = {};
@@ -78,19 +105,20 @@ var names = [
 ];
 
 names.map(function(name) {
-    tiles[name] = document.createElement('div');
-    containerDOM.appendChild(tiles[name]);
+    var dom = tiles[name] = document.querySelector(`#tile${name}`);
+    containerDOM.appendChild(dom);
+    if (dom.innerHTML == '') {
+        dom.innerHTML = `Tile-${name}`;
+    }
 });
 
-// Add your code here to setup the content of the tiles.
-tiles.A.innerHTML = 'Hello World!';
 
 var updateTilePosition = function(dom, tileData) {
     dom.className = 'tileElement';
     dom.style.left = (tileData.xs * 160) + 'px';
     dom.style.top = (tileData.ys * 160) + 'px';
-    dom.style.width = ((tileData.xe - tileData.xs + 1) * 160 - 40) + 'px';
-    dom.style.height = ((tileData.ye - tileData.ys + 1) * 160 - 40) + 'px';
+    dom.style.width = ((tileData.xe - tileData.xs + 1) * 160 - 20) + 'px';
+    dom.style.height = ((tileData.ye - tileData.ys + 1) * 160 - 20) + 'px';
     return dom;
 }
 
