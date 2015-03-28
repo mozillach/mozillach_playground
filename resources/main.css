@@ -1,0 +1,19 @@
+body {
+	font-size: .875rem;
+  line-height: 1.5;
+  font-family: 'Open Sans',X-LocaleSpecific,sans-serif;
+  color: #333;
+}
+
+.main-header {
+  width: 100%;
+  padding: 0;
+  background: #c13832;
+	text-align: center;
+}
+
+
+.promo-grid-inner {
+	width: 1260px;
+	margin: 0px auto;
+}
