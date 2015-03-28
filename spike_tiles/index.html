@@ -19,8 +19,8 @@
         border: 1px solid gray;
         display: inline-block;
     }
-
     </style>
+    <link rel="stylesheet" type="text/css" href="event.css">
 </head>
 <body>
     <div id="tileA"></div>
@@ -39,7 +39,26 @@
             }}(document,"script","twitter-wjs");
         </script>
     </div>
-    <div id="tileJ"></div>
+    <div id="tileJ" style="font-family: 'Open Sans'">
+        <div class="events-tile-container">
+            <div class="events-table-date panel" style="float:right;z-index:1">
+                <div class=" events-table-date-day ">28</div>
+                <div class=" events-table-date-month ">MAR</div>
+                <div class="events-table-date-year">2015</div>
+            </div>
+
+            <div class="events-table-next">Next Event</div>
+            <div class="events-table-name">
+                <a href="https://reps.mozilla.org/e/mozilla-ch-website-hackathon/">
+                    mozilla.ch Website Hackathon
+                </a>
+            </div>
+            <div class="events-table-decription">
+                The goal is to create a draft of the mozilla.ch website (which currently just redirects
+                to mozilla.org). See the planning pad for more ideas for the website.
+            </div>
+        </div>
+    </div>
     <div id="tileK"></div>
     <div id="tileL"></div>
     <div id="tileM"></div>
@@ -107,6 +126,7 @@ var names = [
 names.map(function(name) {
     var dom = tiles[name] = document.querySelector(`#tile${name}`);
     containerDOM.appendChild(dom);
+    dom.className += ' tileElement';
     if (dom.innerHTML == '') {
         dom.innerHTML = `Tile-${name}`;
     }
@@ -114,7 +134,6 @@ names.map(function(name) {
 
 
 var updateTilePosition = function(dom, tileData) {
-    dom.className = 'tileElement';
     dom.style.left = (tileData.xs * 160) + 'px';
     dom.style.top = (tileData.ys * 160) + 'px';
     dom.style.width = ((tileData.xe - tileData.xs + 1) * 160 - 20) + 'px';
@@ -125,7 +144,9 @@ var updateTilePosition = function(dom, tileData) {
 
 var layout = layouts['1260'];
 names.forEach(function(name) {
-    updateTilePosition(tiles[name], layout[name]);
+    if (name in layout) {
+        updateTilePosition(tiles[name], layout[name]);
+    }
 })
 
 </script>
