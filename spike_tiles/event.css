@@ -1,0 +1,132 @@
+.events-tile-container {
+    margin: 5px;
+    margin-top: 0;
+}
+
+.events-table-date {
+    padding: 5px;
+    margin: 3px;
+    text-align: center;
+    position: relative;
+    float: left;
+    width: 60px;
+    background-image: linear-gradient(to bottom, #ffffff 0%,  #f4f4f4 100%);
+    border: none;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    -webkit-box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    -moz-box-shadow: 0 2px 5px rgba(0,0,0,0.25);
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.events-table-date-container {
+    border-bottom: none;
+}
+
+@media only screen and (max-width: @breakLarge) {
+    .events-table-date-container {
+        text-align: center;
+    }
+    .events-table-date {
+        float: left;
+    }
+}
+
+.events-table-date-month {
+    .opensans;
+    font-weight: bold;
+    font-size: 15px;
+    .grayed;
+    text-shadow: 1px 1px 0px rgba(200, 200, 200, 0.75);
+}
+
+.events-table-date-month-multiple {
+    .events-table-date-month;
+    font-size: 12px;
+}
+
+.events-table-date-day {
+    .metabold;
+    font-size: 20px;
+    text-shadow: 1px 1px 0px rgba(200, 200, 200, 0.75);
+}
+
+.events-table-date-day-multiple {
+    .events-table-date-day;
+    font-size: 15px;
+}
+
+.events-table-date-year {
+    .metabold;
+    font-size: 15px;
+    .grayed;
+    text-shadow: 1px 1px 0px rgba(200, 200, 200, 0.75);
+}
+
+.events-table-name, .events-table-name a:visited {
+    color: #2983c8;
+    font-weight: bold;
+    font-size: 18px;
+    text-shadow: 1px 1px 0px rgba(200, 200, 200, 0.75);
+
+    padding-left: 5px;
+}
+
+.events-table-name a {
+    text-decoration: none;
+}
+
+.events-table-description-wrapper {
+    max-width: 700px;
+}
+
+.events-table-next, .events-table-decription {
+    /*white-space: nowrap;*/
+    height: 1.5em;
+    line-height: 1.5em;
+    font-size: 13px;
+    /*width: 100%;*/
+    /*overflow: hidden;*/
+    /*text-overflow: ellipsis;*/
+    /*padding-left: 10px;*/
+}
+.events-table-next {
+    font-style: italic;
+    margin-left: -5px;
+    margin-right: -5px;
+    padding-left: 5px;
+    margin-bottom: 3px;
+    background-color: #F3F3F3;
+}
+
+.events-table-location {
+    .align-right;
+    .grayed;
+    font-size: 13px;
+    line-height: 1.5em;
+}
+
+.events-table-venue {
+    font-style: italic;
+}
+
+.events-table-owner{
+    text-align: right;
+    font-size: 13px;
+    line-height: 1.5em;
+}
+
+.events-table-owner-tag {
+    .grayed;
+    font-style: italic;
+}
+
+.events-table-extra {
+    border-left: 1px solid #ddd;
+}
+
+.events-table-expected {
+    .align-right;
+    .grayed;
+    font-size: 10px;
+}
