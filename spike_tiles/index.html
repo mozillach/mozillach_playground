@@ -32,7 +32,12 @@
     <div id="tileG"></div>
     <div id="tileH"></div>
     <div id="tileI">
-        <a class="twitter-timeline" href="https://twitter.com/MozillaCH" data-widget-id="581826491673128960">Tweets by @MozillaCH</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+        <a class="twitter-timeline" href="https://twitter.com/MozillaCH" data-widget-id="581826491673128960">Tweets by @MozillaCH</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
+            if(!d.getElementById(id)){
+                js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);
+            }}(document,"script","twitter-wjs");
+        </script>
     </div>
     <div id="tileJ"></div>
     <div id="tileK"></div>
@@ -112,8 +117,8 @@ var updateTilePosition = function(dom, tileData) {
     dom.className = 'tileElement';
     dom.style.left = (tileData.xs * 160) + 'px';
     dom.style.top = (tileData.ys * 160) + 'px';
-    dom.style.width = ((tileData.xe - tileData.xs + 1) * 160 - 40) + 'px';
-    dom.style.height = ((tileData.ye - tileData.ys + 1) * 160 - 40) + 'px';
+    dom.style.width = ((tileData.xe - tileData.xs + 1) * 160 - 20) + 'px';
+    dom.style.height = ((tileData.ye - tileData.ys + 1) * 160 - 20) + 'px';
     return dom;
 }
 
