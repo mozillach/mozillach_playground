@@ -1,4 +1,4 @@
 #/bin/bash
 
-lessc less/home.less > resources/main.css
+lessc less/index.less > resources/main.css
 
