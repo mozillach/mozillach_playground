@@ -1,42 +1,36 @@
 tiles:
-    upcoming: Upcoming Events
-    getinvolved: Get involved
-    pastevents: Past Events
-    follow-twitter: Follow us on Twitter
-    download-firefox: Download Firefox
-    ch-apps: Firefox OS Apps made in Switzerland
-    firefox-os: Learn about Firefox OS
-    webmaker: Make the Web you want
-    firefox-hello: Meet Firefox Hello
-    dev-edition: Introducing Firefox Developer Edition
-    firefox-android: Put your Firefox on your Android
-    marketplace: Get web apps on the Firefox Marketplace
-    gearstore: Officla Mozilla gear is here
-    donation: Donate to Mozilla
+    upcoming: Nächste Events
+    getinvolved: Mitmachen
+    pastevents: Vergangene Events
+    follow-twitter: Folge uns auf Twitter
+    download-firefox: Firefox herunterladen
+    ch-apps: Firefox OS Apps aus der Schweiz
+    firefox-os: Lerne Firefox OS kennen
+    webmaker: Entwickle das Web, das du möchtest
+    firefox-hello: Lerne Firefox Hello kennen
+    dev-edition: Hier kommt Firefox Developer Edition
+    firefox-android: Hole dir Firefox auf dein Android-Gerät
+    marketplace: Installiere Web Apps vom Firefox Marketplace
+    gearstore: Hier gibt es die offiziellen Mozilla-Fanartikel
+    donation: Spenden
     external-blog-posts: Blogposts
 header:
     support: Support
     mission: Mission
 getinvolved:
-	description: Mozilla is a global, open community with an active local group here in Switzerland. You are invited to join us! Can you help to localize content for your region and language? Would you like improve Mozilla products? Do you create cool webapps for an open Web Platform? Or would you just like to get in touch with cool people that share your enthusiasm for an open web? Contact us!
-	tile-1: l10n
+	description: Mozilla ist eine globale, offene Community mit einer aktiven lokalen Gruppe hier in der Schweiz. Du kannst mitmachen! Hast du Lust, Inhalte für deine Region und Sprache zu übersetzen? Willst du helfen, Mozilla Produkte zu verbessern? Erstellst du coole Webapps für eine offene Web Platform? Oder hast du einfach Lust, coole Leute kennen zu lernen, die deine Begeisterung für ein offenes Web teilen? Melde dich!
+	tile-1: Lokalisierung
 general:
-    donate: Donate
+    donate: Spenden
 footer:
-	copyright-1: Portions of this content are ©1998–2015 by individual mozilla.org contributors. Content available under a
+	copyright-1: Teile dieses Inhalts stehen unter einem ©1998–2015 von einzelnen Mitwirkenden an mozilla.org. Der Inhalt steht unter einer
 	copyright-2: .
-	cc: Creative Commons license
-	contact: Contact us
-	partner: Partner with Us
-	firefoxaffiliates: Firefox Affiliates
-	contribute: Contribute to this site
-	privacy: Privacy
+	cc: Creative Commons Lizenz
+	contact: Kontakt
+	partner: Werde Partner
+	firefoxaffiliates: Firefox-Partnerprogramm
+	contribute: Zu dieser Seite beitragen
+	privacy: Datenschutz
 	cookies: Cookies
-	legal: Legal
-	trademark-abuse: Report Trademark Abuse
-languages:
-	german: German
-	french: French
-	italian: Italian
-	romansh: Romansh
-	english: English
+	legal: Rechtliches
+	trademark-abuse: Merkenrechtsverletzung melden
