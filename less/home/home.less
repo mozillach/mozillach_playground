@@ -5,15 +5,6 @@
 @import "../standalone/lib.less";
 @import "home-grid.less";
 
-@font-face {
-    font-family: 'FA-Icons-Home';
-    src: url('/media/fonts/icons-home.eot?12-2014#iefix') format('embedded-opentype'),
-         url('/media/fonts/icons-home.woff?12-2014') format('woff'),
-         url('/media/fonts/icons-home.ttf?12-2014') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
 h1, h2, h3, h4, h5, h6 {
     .open-sans-light;
     color: #fff;
@@ -259,16 +250,6 @@ h1, h2, h3, h4, h5, h6 {
                 padding: 0 @baseLine 0 62px;
                 .open-sans-light;
 
-                &:before {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 52px;
-                    height: 42px;
-                    color: #dfa09d;
-                    font-family: 'FA-Icons-Home';
-                }
-
                 &.organizations:before {
                     content: '\f004'; // heart
                 }
@@ -385,14 +366,6 @@ h1, h2, h3, h4, h5, h6 {
                 background: #cd453f;
             }
         }
-    }
-
-    .event-info:before {
-        display: inline-block;
-        font-family: 'FA-Icons-Home';
-        width: 1.5em;
-        text-align: center;
-        color: #b1b1ad;
     }
 
     .event-info.location {
@@ -809,11 +782,6 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
     cursor: pointer;
     -webkit-appearance: none;
-
-    &:before {
-        font-family: 'FA-Icons-Home';
-        content: '\f055\00a0'; // plus-circle space
-    }
 }
 
 /****************************************************************************/
